@@ -13,18 +13,23 @@ public class RotateUp extends Command{
 	@Override
 	protected void initialize() {
 		Robot.angle.angleUp();
+		Robot.angle.startTime();
+		System.out.println("Up");
 	}
 
 	@Override
 	protected void execute() {
-		// TODO Auto-generated method stub
+		//Robot.angle.angleUp();
+		/*Robot.angle.angleUp();
+		Robot.angle.startTime();
+		System.out.println("Up");*/
 		
 	}
 
 	@Override
 	protected boolean isFinished() {
 		// TODO Auto-generated method stub
-		return true;
+		return Robot.angle.getTimeElapsed(0.5);
 	}
 
 	@Override
