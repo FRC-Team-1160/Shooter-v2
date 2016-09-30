@@ -39,6 +39,7 @@ public class Robot extends IterativeRobot {
     public void robotInit() {
 		dt = DriveTrain.getInstance();
 		air = Air.getInstance();
+		//System.out.println("GROOVY_dude");
 		angle = ShooterAngle.getInstance();
 		oi = OI.getInstance();
         chooser = new SendableChooser();

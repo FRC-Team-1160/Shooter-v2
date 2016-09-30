@@ -30,14 +30,14 @@ public class OI {
 	private OI(){
 		stick = new Joystick(0);
 		System.out.println("joystick works");
-		//buttons();
+		buttons();
 	}
 	
 	
 	public void buttons(){
 		fire = new JoystickButton(stick,1);
-		angleUp = new JoystickButton(stick, 3);
-		angleDown = new JoystickButton(stick,4);
+		angleUp = new JoystickButton(stick, 4);
+		angleDown = new JoystickButton(stick,3);
 		tieButtons();
 		
 	}

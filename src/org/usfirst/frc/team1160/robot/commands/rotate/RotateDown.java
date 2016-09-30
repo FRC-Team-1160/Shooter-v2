@@ -13,20 +13,22 @@ public class RotateDown extends Command{
 	@Override
 	protected void initialize() {
 		Robot.angle.angleDown();
+		System.out.println("down");
+		Robot.angle.startTime();
 	}
 
 	@Override
 	protected void execute() {
-		// TODO Auto-generated method stub
+		//Robot.angle.angleDown();
 		
 	}
 
 	@Override
 	protected boolean isFinished() {
 		// TODO Auto-generated method stub
-		return true;
+		return Robot.angle.getTimeElapsed(0.5);
 	}
-
+  
 	@Override
 	protected void end() {
 		Robot.angle.stop();
