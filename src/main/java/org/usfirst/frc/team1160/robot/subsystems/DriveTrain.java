@@ -28,10 +28,10 @@ public class DriveTrain extends Subsystem implements RobotMap{
 	
 	public void ManualDrive(){
 		//TODO Test if these orientations are correct
-		fL.set(.6*(OI.getInstance().getStick().getZ() - OI.getInstance().getStick().getY()));
-		bL.set(.6*(OI.getInstance().getStick().getZ() - OI.getInstance().getStick().getY()));
-		fR.set(.6*(OI.getInstance().getStick().getZ() + OI.getInstance().getStick().getY()));
-		bR.set(.6*(OI.getInstance().getStick().getZ() + OI.getInstance().getStick().getY()));
+		fL.set(.6*(OI.getInstance().getStick().getRawAxis(4) - OI.getInstance().getStick().getRawAxis(1))); // Z - Y
+		bL.set(.6*(OI.getInstance().getStick().getRawAxis(4) - OI.getInstance().getStick().getRawAxis(1)));
+		fR.set(.6*(OI.getInstance().getStick().getRawAxis(4) + OI.getInstance().getStick().getRawAxis(1))); // Z + Y
+		bR.set(.6*(OI.getInstance().getStick().getRawAxis(4) + OI.getInstance().getStick().getRawAxis(1)));
 	}
 	
 	@Override
