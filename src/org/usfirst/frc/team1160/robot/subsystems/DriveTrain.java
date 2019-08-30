@@ -13,7 +13,8 @@ public class DriveTrain extends Subsystem implements RobotMap{
 	private Talon bL, fL, bR, fR;
 	
 	private DriveTrain(){
-		bL = new Talon(BACK_LEFT_DRIVE);
+		bL = new Talon(BACK_LEFT_DRIVE
+				);
 		bR = new Talon(BACK_RIGHT_DRIVE);
 		fL = new Talon(FRONT_LEFT_DRIVE);
 		fR = new Talon(FRONT_RIGHT_DRIVE);
@@ -28,10 +29,10 @@ public class DriveTrain extends Subsystem implements RobotMap{
 	
 	public void ManualDrive(){
 		//TODO Test if these orientations are correct
-		fL.set(.6*(OI.getInstance().getStick().getZ() - OI.getInstance().getStick().getY()));
-		bL.set(.6*(OI.getInstance().getStick().getZ() - OI.getInstance().getStick().getY()));
-		fR.set(.6*(OI.getInstance().getStick().getZ() + OI.getInstance().getStick().getY()));
-		bR.set(.6*(OI.getInstance().getStick().getZ() + OI.getInstance().getStick().getY()));
+		fL.set(1.*(OI.getInstance().getStick().getZ() - OI.getInstance().getStick().getY()));
+		bL.set(1.*(OI.getInstance().getStick().getZ() - OI.getInstance().getStick().getY()));
+		fR.set(1.*(OI.getInstance().getStick().getZ() + OI.getInstance().getStick().getY()));
+		bR.set(1.*(OI.getInstance().getStick().getZ() + OI.getInstance().getStick().getY()));
 	}
 	
 	@Override
