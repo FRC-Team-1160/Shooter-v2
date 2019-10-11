@@ -19,7 +19,7 @@ public class DriveTrain extends Subsystem implements RobotMap{
 		fR = new Talon(FRONT_RIGHT_DRIVE);
 		
 	}
-	
+	 
 	public static DriveTrain getInstance(){
 		if(instance==null)
 			instance = new DriveTrain();
@@ -28,10 +28,10 @@ public class DriveTrain extends Subsystem implements RobotMap{
 	
 	public void ManualDrive(){
 		//TODO Test if these orientations are correct
-		fL.set(.6*(OI.getInstance().getStick().getRawAxis(4) - OI.getInstance().getStick().getRawAxis(1))); // Z - Y
-		bL.set(.6*(OI.getInstance().getStick().getRawAxis(4) - OI.getInstance().getStick().getRawAxis(1)));
-		fR.set(.6*(OI.getInstance().getStick().getRawAxis(4) + OI.getInstance().getStick().getRawAxis(1))); // Z + Y
-		bR.set(.6*(OI.getInstance().getStick().getRawAxis(4) + OI.getInstance().getStick().getRawAxis(1)));
+		fL.set((OI.getInstance().getStick().getRawAxis(4) - OI.getInstance().getStick().getRawAxis(1))); // Z - Y
+		bL.set((OI.getInstance().getStick().getRawAxis(4) - OI.getInstance().getStick().getRawAxis(1)));
+		fR.set((OI.getInstance().getStick().getRawAxis(4) + OI.getInstance().getStick().getRawAxis(1))); // Z + Y
+		bR.set((OI.getInstance().getStick().getRawAxis(4) + OI.getInstance().getStick().getRawAxis(1)));
 	}
 	
 	@Override
